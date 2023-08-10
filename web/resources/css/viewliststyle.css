@@ -1,0 +1,56 @@
+/* 
+    Document   : audittracestyle.css
+    Created on : Apr 30, 2013, 9:00:48 AM
+    Author     : Amila Jayasekara
+    Description:
+       CSS for audittracestyle section
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+tr.row1 td{
+    background: #F9F9F9;
+}
+
+tr.row2 td{
+    background: #F0F1F3;
+}
+
+.parentTable{
+    font-family: Roboto !important;
+    font-weight: 400;
+    border-collapse:collapse;   
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.parentTable td {
+border-left: 2px solid white;
+border-right: 2px solid white;
+}
+
+.parentTable td:first-child {
+border-left: none;
+}
+
+.parentTable td:last-child {
+border-right: none;
+}
+
+
+.parentTable tr td{
+    padding: 5px 30px;
+}
+
+.boldText{
+    font-weight: bold;
+}
+
+.seperator{
+    background-color: transparent;
+    height: 10px
+}

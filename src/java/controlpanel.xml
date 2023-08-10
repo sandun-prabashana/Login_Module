@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ start LoginAction ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <package name="login" extends="pglobal" namespace="/">
+        <action name="*UserLogin" method="{1}" class="com.epic.atemlogin.action.login.LoginAction" >
+            <result name="message">/login.jsp</result>
+            <result name="loginpage">/login.jsp</result>
+            <result name="success">/WEB-INF/pages/eathfront/eathfront.jsp</result>          
+            <result name="getpage">/WEB-INF/pages/eathfront/eathfront.jsp</result>
+            <result name="resetpwd" type="redirectAction">
+                <param name="actionName">ViewPasswordReset</param>
+            </result>
+        </action>
+    </package>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ end LoginAction ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ start PasswordResetAction ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <package name="ResetPassword" extends="pglobal" namespace="/">
+        <action name="*PasswordReset" method="{1}" class="com.epic.atemlogin.action.passwordreset.PasswordResetAction">
+            <result name="message">/WEB-INF/pages/msgFrag.jsp</result>
+            <result name="view">/WEB-INF/pages/resetloginpwd/pwdreset.jsp</result>          
+            <result name="success"></result>
+        </action>
+    </package>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ end  PasswordResetAction ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+   
+</struts>

@@ -1,0 +1,499 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 11, 2018, 1:31:33 PM
+    Author     : supul_g
+*/
+
+
+@media only screen and (max-width: 320px) {
+
+
+    #sidemenu{
+        display: none;
+    }
+     #footer{
+        display: none;
+    }
+    #header{
+        width: 100%;
+    }
+    .mv-body {
+        width: 100%;
+        margin-top: 70px;
+        background-color: #FCFCFC;
+        height: auto;
+        padding: 0px;
+        padding-left: 0px;
+        margin-left: 20%;
+        transition: .5s;
+    }
+
+    .mv-header {
+        width: 100%;
+        right: 0;
+        height: 25px;
+        background-color: #575757;
+        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12);
+        transition: 0.3s;
+        z-index: 10;
+    }
+    #showbtn{
+        display: block;
+    }
+
+    .mv-topdetail {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 11;
+        width: 100%;
+        padding: 20px 0 5px 0;
+        background-color: #575757;
+    }
+    .sidebar-left-collapse {
+        font-family: Raleway;
+        position: fixed;
+        top: 165px;
+        left: 0;
+        background-color: #575757;
+        width: 100%;
+        height: 75%;
+        overflow-y: auto;
+        padding: 0px 0 50px 0;
+        z-index: 10;
+    }
+
+    .mv-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        padding: 5px 0;
+        background-color: #575757;
+        font-family: Raleway;
+        color: #bbbbbb;
+    }
+
+    .mv-breadcrumb {
+        position: fixed;
+        left: 18%;
+        background: #0046A2;
+        padding: 1px 5px;
+        height: 25px;
+        color: #ffffff;
+        z-index: 10;
+        font-family: Raleway;
+        font-size: 9px;
+    }
+
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 479px){
+
+
+    #sidemenu{
+        display: none;
+    }
+     #footer{
+        display: none;
+    }
+    .mv-body {
+        width: 100%;
+        margin-top: 70px;
+        height: auto;
+        padding: 0px;
+        padding-left: 0px;
+        margin-left: 20%;
+        transition: .5s;
+    }
+    .mv-header {
+        width: 100%;
+        right: 0;
+        height: 25px;
+        background-color: #575757;
+        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12);
+        transition: 0.3s;
+        z-index: 10;
+    }
+    #showbtn{
+        display: block;
+    }
+    .mv-topdetail {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 11;
+        width: 100%;
+        padding: 20px 0 5px 0;
+        background-color: #575757;
+    }
+    .sidebar-left-collapse {
+        font-family: Raleway;
+        position: fixed;
+        top: 165px;
+        left: 0;
+        background-color: #575757;
+        width: 100%;
+        height: 75%;
+        overflow-y: auto;
+        padding: 0px 0 50px 0;
+        z-index: 10;
+    }
+
+    .mv-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        padding: 5px 0;
+        background-color: #575757;
+        font-family: Raleway;
+        color: #bbbbbb;
+    }
+    .mv-breadcrumb {
+        position: fixed;
+        left: 18%;
+        background: #0046A2;
+        padding: 1px 8px;
+        height: 25px;
+        color: #ffffff;
+        z-index: 10;
+        font-family: Raleway;
+        font-size: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 950px){ 
+
+    #sidemenu{
+        display: none;
+    }
+    #footer{
+        display: none;
+    }
+    .mv-body {
+        width: 100%;
+        margin-top: 110px;
+        height: auto;
+        padding: 0px;
+        padding-left: 0px;
+        margin-left: 265px;
+        transition: .5s;
+    }
+    .mv-header {
+        width: 100%;
+        right: 0;
+        height: 25px;
+        background-color: #575757;
+        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12);
+        transition: 0.3s;
+        z-index: 10;
+    }
+    #showbtn{
+        display: block;
+    }
+    .mv-topdetail {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 11;
+        width: 100%;
+        padding: 20px 0 5px 0;
+        background-color: #575757;
+    }
+    .sidebar-left-collapse {
+        font-family: Raleway;
+        position: fixed;
+        top: 165px;
+        left: 0;
+        background-color: #575757;
+        width: 100%;
+        height: 75%;
+        overflow-y: auto;
+        padding: 0px 0 50px 0;
+        z-index: 10;
+    }
+    .mv-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        padding: 5px 0;
+        background-color: #575757;
+        font-family: Raleway;
+        color: #bbbbbb;
+    }
+}
+
+@media only screen and (min-width: 950px) and (max-width: 1100px){ 
+
+    .mv-body {
+        margin-top: 110px;
+        height: auto;
+        padding: 0px;
+        padding-left: 0px;
+        margin-left: 265px;
+        margin-bottom: 40px;
+        transition: .5s;
+    }
+    .mv-header {
+        width: 80%;
+        right: 0;
+        height: 25px;
+        background-color: #575757;
+        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12);
+        transition: 0.3s;
+        z-index: 10;
+    }
+    #showbtn{
+        display: none;
+    }
+
+    .sidebar-left-collapse {
+        font-family: Raleway;
+        position: fixed;
+        top: 185px;
+        left: 0;
+        background-color:#575757;
+        width: 20%;
+        height: 75%;
+        overflow-y: auto;
+        padding: 0px 0 40px 0;
+        z-index: 10;
+    }
+
+    .mv-select-label {
+        width: 50%;
+        top: 180px;
+        color: #95989A;
+        font-size: 10px;
+        padding: 10px 15px;
+        font-weight: normal;
+        background: black;
+        letter-spacing: 1px;
+        height: 36px;
+    }
+    #showbtn{
+        display: none;
+    }
+    #hidebtn{
+        display: none;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 1100px) and (max-width: 1150px){ 
+
+    .mv-body {
+        margin-top: 110px;
+        height: auto;
+        padding: 0px;
+        padding-left: 0px;
+        margin-left: 265px;
+        margin-bottom: 40px;
+        transition: .5s;
+    }
+    .mv-header {
+        width: 80%;
+        right: 0;
+        height: 25px;
+        background-color: #575757;
+        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12);
+        transition: 0.3s;
+        z-index: 10;
+    }
+    #showbtn{
+        display: none;
+    }
+
+    .sidebar-left-collapse {
+        font-family: Raleway;
+        position: fixed;
+        top: 185px;
+        left: 0;
+        background-color:#575757;
+        width: 20%;
+        height: 75%;
+        overflow-y: auto;
+        padding: 0px 0 40px 0;
+        z-index: 10;
+    }
+
+    .mv-select-label {
+        width: 50%;
+        top: 180px;
+        color: #95989A;
+        font-size: 10px;
+        padding: 10px 15px;
+        font-weight: normal;
+        background: black;
+        letter-spacing: 1px;
+        height: 36px;
+    }
+    #showbtn{
+        display: none;
+    }
+    #hidebtn{
+        display: none;
+    }
+
+
+}
+
+
+
+@media only screen and (min-width: 1150px) and (max-width: 1200px){ 
+
+    .mv-body {
+         margin-top: 110px;
+        height: auto;
+        padding: 0px;
+        padding-left: 0px;
+        margin-left: 265px;
+        margin-bottom: 40px;
+        transition: .5s;
+    }
+    .mv-header {
+        width: 80%;
+        right: 0;
+        height: 25px;
+        background-color: #575757;
+        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12);
+        transition: 0.3s;
+        z-index: 10;
+    }
+    #showbtn{
+        display: none;
+    }
+
+    .sidebar-left-collapse {
+        font-family: Raleway;
+        position: fixed;
+        top: 185px;
+        left: 0;
+        background-color:#575757;
+        width: 20%;
+        height: 75%;
+        overflow-y: auto;
+        padding: 0px 0 40px 0;
+        z-index: 10;
+    }
+
+    .mv-select-label {
+        width: 50%;
+        top: 180px;
+        color: #95989A;
+        font-size: 10px;
+        padding: 10px 15px;
+        font-weight: normal;
+        background: black;
+        letter-spacing: 1px;
+        height: 36px;
+    }
+    #showbtn{
+        display: none;
+    }
+    #hidebtn{
+        display: none;
+    }
+
+
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1500px){ 
+
+    .mv-body {
+        margin-top: 110px;
+        height: fit-content;
+        padding: 0px;
+        padding-left: 0px;
+        margin-left: 265px;
+        margin-bottom: 40px;
+        transition: .5s;
+    }
+    .mv-header {
+        width: 80%;
+        right: 0;
+        height: 25px;
+        background-color: #575757;
+        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12);
+        transition: 0.3s;
+        z-index: 10;
+    }
+    #showbtn{
+        display: none;
+    }
+
+    .sidebar-left-collapse {
+        font-family: Raleway;
+        position: fixed;
+        top: 180px;
+        left: 0;
+        background-color:#575757;
+        width: 20%;
+        height: 75%;
+        overflow-y: auto;
+        padding: 0px 0 40px 0;
+        z-index: 10;
+    }
+
+    .mv-select-label {
+        width: 50%;
+        top: 100px;
+        color: #95989A;
+        font-size: 10px;
+        padding: 10px 15px;
+        font-weight: normal;
+        background: black;
+        letter-spacing: 1px;
+        height: 36px;
+    }
+    #showbtn{
+        display: none;
+    }
+    #hidebtn{
+        display: none;
+    }
+
+}
+
+
+@media only screen and (min-width: 1500px) and (max-width: 1999px){ 
+
+    .mv-body {
+        margin-top: 110px;
+        height: auto;
+        padding: 0px;
+        padding-left: 0px;
+        margin-left: 265px;
+        margin-bottom: 40px;
+        transition: .5s;
+    }
+    .mv-header {
+        width: 80%;
+        right: 0;
+        height: 25px;
+        background-color: #575757;
+        box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12);
+        transition: 0.3s;
+        z-index: 10;
+    }
+    #showbtn{
+        display: none;
+    }
+    #hidebtn{
+        display: none;
+    }
+
+}

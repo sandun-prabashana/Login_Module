@@ -1,0 +1,6 @@
+<div class="footer" id='footer'>
+    <p>Android Experience Hub V 0.01.01 Powered by Epic Lanka Technologies (Pvt.) Ltd.</p>
+</div>
+
+<!--<script src="${pageContext.request.contextPath}/resources/assets/js/jquery.min.js"></script>-->
+<script src="${pageContext.request.contextPath}/resources/assets/js/main.js"></script>

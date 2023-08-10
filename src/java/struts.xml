@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.action.extension" value="blb" />
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.multipart.saveDir" value="/opt" />
+    <constant name="struts.multipart.maxSize" value="200000000" /><!-- 200mb sum of file content uploaded-->
+    <package name="pglobal" namespace="/" extends="struts-default,json-default,jasperreports-default">       
+        <interceptors>
+            <interceptor name="EASYGOAccesControl" class="com.epic.atemlogin.util.interceptor.AccessControlIntercepter" />
+            <interceptor-stack name="EASYGODefaultStack">
+                <interceptor-ref name="modelDriven"/>
+                <interceptor-ref name="basicStack"/>
+                <interceptor-ref name="EASYGOAccesControl"/>
+            </interceptor-stack>
+            <interceptor-stack name="FileUploadStack">
+                <interceptor-ref name="modelDriven"/>
+                <interceptor-ref name="fileUpload">
+                    <param name="maximumSize">100000000</param><!-- 100mb file size-->
+                    <param name="allowedTypes">application/pdf ,image/jpeg,image/png,image/jpg,image/gif</param>
+                </interceptor-ref>
+                <interceptor-ref name="basicStack"/>
+                <interceptor-ref name="EASYGOAccesControl"/>
+            </interceptor-stack>
+        </interceptors>        
+        <default-interceptor-ref name="EASYGODefaultStack"/>    
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ start global error page for entire application ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <global-results>
+            <result name="loginpage">/login.jsp</result>
+            <result name="acccontroler">/defaultaccesscontroler.jsp</result>
+            <result name="multiaccess">/WEB-INF/pages/multiaccess.jsp</result>
+            <result name="erropage"></result>
+        </global-results>
+        
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ end global error page for entire application ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->    
+    </package>
+    <include file="controlpanel.xml"/>
+ 
+</struts>    

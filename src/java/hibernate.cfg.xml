@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.c3p0.idle_test_period">86400</property>
+        <property name="hibernate.c3p0.testConnectionOnCheckout">true</property>
+       
+        <!--MYSQL-->
+        <!--<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>-->
+        <property name="hibernate.connection.datasource">ATEMJNDI</property>    
+
+        <!--MSSQL-->
+        <!--<property name="hibernate.connection.datasource">ATEMJNDI</property>-->
+        
+<!--        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://124.43.16.185:50321/EHTMS_HUB</property>
+        <property name="hibernate.connection.username">qauser</property>
+        <property name="hibernate.connection.password">Qauser#123</property>-->
+        
+        <!--        
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="hibernate.connection.url">jdbc:sqlserver://124.43.16.185:65516;databaseName=EHTMS_HUB?</property>
+        <property name="hibernate.connection.username">epic</property>
+        <property name="hibernate.connection.password">Epic@123</property>-->
+        
+        <property name="hibernate.connection.autocommit">false</property>
+        <property name="hibernate.transaction.flush_before_completion">false</property>
+        <property name="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+        <!--Enable Hibernate's automatic session context management, in this case the session will be close after each transaction!--> 
+        <property name="current_session_context_class">thread</property>
+        <!--Echo all executed SQL to stdout--> 
+        <property name="show_sql">true</property>
+        <!--auto create tables--> 
+        <property name="hbm2ddl.auto">none</property>
+        <mapping class="com.epic.atemlogin.util.mapping.Users"/>
+        <mapping class="com.epic.atemlogin.util.mapping.Status"/>
+        <mapping class="com.epic.atemlogin.util.mapping.Audittrace"/>
+        <mapping class="com.epic.atemlogin.util.mapping.Passwordparm"/>
+        <mapping class="com.epic.atemlogin.util.mapping.Passwordpolicy"/>
+        <mapping class="com.epic.atemlogin.util.mapping.Passwordhistory"/>
+    </session-factory>
+</hibernate-configuration>

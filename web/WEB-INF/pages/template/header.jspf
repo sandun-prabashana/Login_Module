@@ -1,0 +1,128 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<%@ page trimDirectiveWhitespaces="true" %>
+<sj:head jqueryui="true" jquerytheme="abccthemes" customBasepath="resources/themes"/>
+<!--header for common includes-->
+<link href="${pageContext.request.contextPath}/resources/assets/css/bootstrap.css" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/resources/assets/css/main.css" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/resources/assets/css/home.css" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/resources/assets/css/body.css" rel="stylesheet" />
+<link href="${pageContext.request.contextPath}/resources/assets/css/responsive.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/assets/image/favicon.png">
+
+<!-- simple tree -->
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.cookie.js"></script>    
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.blockUI.js"></script>   
+<!-- -->
+<script type="text/javascript">
+    $.subscribe('onPaging', function(event, data) {
+        var output = "";
+        $.ajax({
+            url: '${pageContext.request.contextPath}/CheckSessionCommon.blb',
+            data: "",
+            dataType: "json",
+            type: "POST",
+            success: function(data) {
+                output = data["model"];
+                if (output === "error") {
+                    window.location = "${pageContext.request.contextPath}/LogoutUserLogin.blb?";
+                }
+            },
+            error: function(data) {
+                window.location = "${pageContext.request.contextPath}/LogoutUserLogin.blb?";
+            }
+        });
+    });
+    
+</script>
+<style>
+/*    .ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column{
+        background: #575757 ;
+        color: white;
+    }
+    .ui-jqgrid .ui-pg-table {
+        background: #8a8a8a;
+        color: #2f2f2f;
+    }
+    .ui-th-ltr, .ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr {
+        border-left: 1px solid !important;
+    }*/
+
+    input.radioClass{
+        width: 20px;
+        height: 20px;
+        margin: 4px;
+        float: left;
+    }
+    label.radioClass{
+        float: left;
+        margin: 5px;
+        color: black;
+    }
+    input.radioClass ~ label{
+        float: left;
+        margin: 5px;
+        color: black;
+        font-size: 13px;
+    }
+    input.checkClass{
+        position: absolute;
+        top: 0;
+        height: 25px;
+        width: 20px;
+    }
+
+    input.checkClass ~ label{
+        position: absolute;
+        top: 0;
+        margin: 7px 0 0 30px;
+    }
+
+    @media only screen and (min-width: 768px){
+        #newtList{
+            float:left;
+        }
+        #currentList{
+            float:right;
+        }
+        #buttonlist{
+            text-align: center;
+        }
+        #right,#rightall,#left,#leftall{
+            font-size:12px;
+            width:60px;
+            margin:2px;
+        }
+
+    }
+
+    @media only screen and (min-width: 1092px){
+        .sorting{
+            display: table-cell !important;
+        }
+    }
+
+    @media only screen and (max-width: 768px){
+        #newList{
+            float:top;
+        }
+        #currentList{
+            float:bottom;
+        }
+        #buttonlist{
+            text-align: center;
+            padding: 3% 10% 14% 36%;
+        }
+        #right,#rightall,#left,#leftall{
+            font-size:12px;
+            width:60px;
+            float: left;
+            padding: 2px;
+        }
+
+
+
+    }
+
+</style>
